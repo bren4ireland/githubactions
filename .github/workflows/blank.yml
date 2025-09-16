@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  workflow_dispatch:
+jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Set up Keycloak
+            uses: progi1984/setup-keycloak@master
+            with:
+              keycloak_version: 19.0.3
+              keycloak_http_port: 80
+              keycloak_admin_user: admin_user
+
+          - name: Deploy Keycloak
+            run: |
+              docker run -d \
+                -p 8080:8080 \
+                -e KEYCLOAK_ADMIN=admin_user \
+                -e KEYCLOAK_ADMIN_PASSWORD=admin_password \
+                quay.io/keycloak/keycloak:19.0.3 \
+                start-dev
