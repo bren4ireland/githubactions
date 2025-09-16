@@ -1,4 +1,4 @@
-name: bran  
+name: brens 
 on:
   workflow_dispatch:
 jobs:
