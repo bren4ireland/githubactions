@@ -1,0 +1,9 @@
+name: firstworkflow
+on: workflow_dispatch
+jobs:
+  brens:
+    runs-on: ubuntu-latest
+    steps:
+      - name: brens
+        run: echo "hi bren"
+        
