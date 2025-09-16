@@ -1,19 +1,19 @@
-name: brens 
+name: brens
 on:
   workflow_dispatch:
+
 jobs:
-      validate:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout code
-            uses: actions/checkout@v4
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-          - name: setup python
-            uses: actions/setup-python@v4
+      - name: Setup Python
+        uses: actions/setup-python@v4
 
-          - name: install pandas
-            run: pip install pandas
+      - name: Install pandas
+        run: pip install pandas
 
-          - name: hi python
-          - run: echo "hi from python"
-         
+      - name: Say hi from Python
+        run: echo "hi from python"
