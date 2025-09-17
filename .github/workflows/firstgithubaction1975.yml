@@ -17,3 +17,13 @@ jobs:
 
       - name: Say hi from Python
         run: echo "hi from python"
+
+  Turkey:
+    runs-on: ubuntu-latest
+    steps:
+        - name: say hi thanksgiving
+          run: pip install matplotlib
+        - name: what
+          run: echo "Workflow triggered by ${{ github.actor }}"
+
+      
