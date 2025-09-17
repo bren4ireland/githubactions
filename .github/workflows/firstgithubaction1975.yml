@@ -25,6 +25,6 @@ jobs:
         - name: say hi thanksgiving
           run: pip install matplotlib
         - name: what
-          run: echo "The Secret is cooking a chicken is ${{ secrets.brendans }}"
+          run: echo "The Secret is cooking a chicken is ${{ secrets.BRENDANS }}"
 
       
