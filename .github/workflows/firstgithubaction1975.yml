@@ -19,6 +19,7 @@ jobs:
         run: echo "hi from python"
 
   Turkey:
+    needs: validate
     runs-on: ubuntu-latest
     steps:
         - name: say hi thanksgiving
